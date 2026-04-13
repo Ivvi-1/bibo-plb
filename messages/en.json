@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "products": "Products",
+    "how": "How we work",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "AI Product Platform for Founders and Companies",
+    "subheadline": "BIBO PLB helps launch products and services powered by artificial intelligence — from idea and MVP to a full working product system.",
+    "cta_primary": "Discuss a project",
+    "cta_secondary": "See our products",
+    "value1": "From idea to product",
+    "value2": "AI infrastructure",
+    "value3": "Launch in weeks"
+  },
+  "about": {
+    "label": "Who we are",
+    "title": "Not just a contractor — a product platform",
+    "text": "BIBO PLB combines expertise in AI, development, marketing, and product launch. We handle tasks end-to-end: as an external team or as part of your startup.",
+    "point1_title": "Product thinking",
+    "point1_text": "We think in products, not tasks. Every decision is a hypothesis we test.",
+    "point2_title": "Full cycle",
+    "point2_text": "From research to launch and growth. We don't hand off — we see it through.",
+    "point3_title": "Own products",
+    "point3_text": "We build our own AI services. That's the best proof of our competence."
+  },
+  "value": {
+    "label": "What we deliver",
+    "title": "From idea to a working AI product",
+    "card1_title": "Fast launch",
+    "card1_text": "AI products without hiring a large team. We start fast and test hypotheses in real conditions.",
+    "card2_title": "Full infrastructure",
+    "card2_text": "Technology, marketing and product thinking in one team. No need to recruit separately.",
+    "card3_title": "Real products",
+    "card3_text": "We draw on our own experience launching AI services, not just pitch decks.",
+    "card4_title": "Flexible model",
+    "card4_text": "We work as a service partner or as part of your team — depending on the task."
+  },
+  "models": {
+    "label": "Collaboration formats",
+    "title": "Two ways to work together",
+    "service_title": "Service Model",
+    "service_text": "BIBO PLB as a service company: we research the task, design the solution, develop the product or AI service, and help with launch and growth.",
+    "startup_title": "Startup Partner Model",
+    "startup_text": "BIBO PLB as part of a startup team: we join as product + tech + growth partner, help build the MVP, and participate in hypothesis testing, UX, analytics and go-to-market."
+  },
+  "products": {
+    "label": "Platform products",
+    "title": "What we have already built",
+    "reputar_name": "Reputar",
+    "reputar_desc": "AI reputation management service for social networks and messengers.",
+    "reputar_value": "Faster response times, standardised communication, reduced losses from negative feedback.",
+    "mooly_name": "Mooly",
+    "mooly_desc": "AI monitoring of real estate listings across social networks and messengers.",
+    "mooly_value": "Time savings, content deduplication, wide source coverage.",
+    "gedell_name": "Gedell",
+    "gedell_desc": "AI analysis of investment attractiveness of real estate in Dubai.",
+    "gedell_value": "Data-driven investment decisions.",
+    "raven_name": "Raven",
+    "raven_desc": "AI service for reducing information overload.",
+    "raven_value": "Time savings and reduced information load.",
+    "visit": "Visit website"
+  },
+  "process": {
+    "label": "How we work",
+    "title": "Four steps from idea to product",
+    "step1_num": "01",
+    "step1_title": "Research",
+    "step1_text": "We study the task, context, audience and competitive landscape.",
+    "step2_num": "02",
+    "step2_title": "Design",
+    "step2_text": "We form a solution hypothesis and product architecture.",
+    "step3_num": "03",
+    "step3_title": "Build",
+    "step3_text": "We assemble the MVP, AI service or module in real conditions.",
+    "step4_num": "04",
+    "step4_title": "Launch",
+    "step4_text": "We launch, test, and improve iteratively."
+  },
+  "trust": {
+    "label": "Why teams trust us",
+    "title": "The case for BIBO PLB",
+    "point1": "Our own applied AI products",
+    "point2": "Experience across product, growth, coding and AI",
+    "point3": "Fast hypothesis testing without bureaucracy",
+    "point4": "Ability to work in conditions of uncertainty",
+    "point5": "Flexible model: from staff augmentation to partnership"
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's discuss your project",
+    "promise1": "We reply fast",
+    "promise2": "We help structure your idea",
+    "promise3": "We'll map a realistic launch path",
+    "name_label": "Name",
+    "name_placeholder": "What's your name?",
+    "company_label": "Company / project",
+    "company_placeholder": "Company or project name",
+    "contact_label": "Contact",
+    "contact_placeholder": "Email, Telegram or WhatsApp",
+    "task_label": "Task",
+    "task_placeholder": "Briefly describe what needs to be done",
+    "submit": "Send request",
+    "success": "Request sent! We'll be in touch shortly.",
+    "error": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "description": "AI Product Platform for founders and companies. We launch, test and scale digital products.",
+    "products_title": "Products",
+    "copyright": "© 2025 BIBO PLB. All rights reserved."
+  }
+}
