@@ -18,8 +18,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const switchLocale = () => {
-    const next = locale === "ru" ? "en" : "ru";
+  const switchLocale = (next: string) => {
     const segments = pathname.split("/");
     segments[1] = next;
     router.push(segments.join("/") || "/");
@@ -58,12 +57,21 @@ export default function Navbar() {
             </a>
           </div>
 
-          <button
-            onClick={switchLocale}
-            className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors border border-gray-200 rounded-md px-3 py-1 hover:border-gray-400"
-          >
-            {locale === "ru" ? "EN" : "RU"}
-          </button>
+          <div className="flex items-center gap-1">
+            {(["en", "uk", "ru"] as const).map((l) => (
+              <button
+                key={l}
+                onClick={() => switchLocale(l)}
+                className={`text-xs font-medium transition-colors px-2 py-1 rounded-md border ${
+                  locale === l
+                    ? "text-gray-900 border-gray-400"
+                    : "text-gray-400 border-transparent hover:text-gray-700 hover:border-gray-200"
+                }`}
+              >
+                {l.toUpperCase()}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </nav>
