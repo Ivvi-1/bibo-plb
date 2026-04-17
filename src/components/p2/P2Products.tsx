@@ -14,12 +14,12 @@ export default function P2Products() {
   const t = useTranslations("p2.products");
 
   return (
-    <section id="products" className="py-28 px-6 bg-white">
+    <section id="products" className="py-20 md:py-28 px-5 sm:px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <FadeIn>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12 md:mb-16">
             <div className="p2-eyebrow mb-5">{t("eyebrow")}</div>
-            <h2 className="text-[36px] md:text-[48px] leading-[1.08] font-semibold tracking-[-0.025em] text-[#0a0a0a]">
+            <h2 className="text-[32px] sm:text-[40px] md:text-[48px] leading-[1.08] font-semibold tracking-[-0.025em] text-[#0a0a0a]">
               {t("title")}
             </h2>
             <p className="mt-5 text-[16px] md:text-[17px] text-[#4a4a4a]">

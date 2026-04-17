@@ -7,12 +7,12 @@ export default function P2Process() {
   const t = useTranslations("p2.process");
 
   return (
-    <section id="process" className="py-28 px-6 bg-[#fafaf7] relative overflow-hidden">
+    <section id="process" className="py-20 md:py-28 px-5 sm:px-6 bg-[#fafaf7] relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <FadeIn>
-          <div className="max-w-3xl mb-20">
+          <div className="max-w-3xl mb-14 md:mb-20">
             <div className="p2-eyebrow mb-5">{t("eyebrow")}</div>
-            <h2 className="text-[36px] md:text-[48px] leading-[1.08] font-semibold tracking-[-0.025em] text-[#0a0a0a]">
+            <h2 className="text-[32px] sm:text-[40px] md:text-[48px] leading-[1.08] font-semibold tracking-[-0.025em] text-[#0a0a0a]">
               {t("title")}
             </h2>
           </div>
