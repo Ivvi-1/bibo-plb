@@ -37,7 +37,7 @@ export default function P2Products() {
                 rel="noopener noreferrer"
                 className="p2-card rounded-2xl p-8 h-full block group relative overflow-hidden"
               >
-                {/* Decorative neon line at top of card */}
+                {/* Decorative neon line at top of card — slow, subtle */}
                 <svg
                   className="absolute top-0 left-0 w-full pointer-events-none"
                   viewBox="0 0 400 40"
@@ -46,18 +46,24 @@ export default function P2Products() {
                 >
                   <path
                     d="M 0 20 Q 100 5, 200 20 T 400 20"
-                    className="p2-base-line"
+                    stroke="#0a0a0a"
+                    strokeOpacity="0.08"
+                    strokeWidth="0.8"
+                    strokeDasharray="2 5"
+                    fill="none"
                   />
                   <path
                     d="M 0 20 Q 100 5, 200 20 T 400 20"
                     stroke="#4f7fff"
-                    strokeWidth="1.2"
+                    strokeWidth="0.9"
+                    strokeOpacity="0.5"
                     fill="none"
-                    strokeDasharray="40 360"
+                    strokeLinecap="round"
+                    strokeDasharray="16 560"
                     style={{
-                      animation: `p2-dash-flow ${6 + i}s linear infinite`,
-                      animationDelay: `${i * 0.7}s`,
-                      filter: "drop-shadow(0 0 4px rgba(79, 127, 255, 0.7))",
+                      animation: `p2-dash-flow ${18 + i * 2}s linear infinite`,
+                      animationDelay: `${i * 3}s`,
+                      filter: "drop-shadow(0 0 2px rgba(79, 127, 255, 0.5))",
                     }}
                   />
                 </svg>

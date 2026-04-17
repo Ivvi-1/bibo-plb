@@ -22,17 +22,25 @@ export default function P2Process() {
         <div className="relative">
           <div className="hidden md:block absolute top-6 left-[6%] right-[6%] pointer-events-none">
             <svg viewBox="0 0 1000 12" className="w-full h-3" preserveAspectRatio="none">
-              <path d="M 0 6 L 1000 6" className="p2-base-line" strokeDasharray="4 4" />
+              <path
+                d="M 0 6 L 1000 6"
+                stroke="#0a0a0a"
+                strokeOpacity="0.08"
+                strokeWidth="0.8"
+                strokeDasharray="2 5"
+                fill="none"
+              />
               <path
                 d="M 0 6 L 1000 6"
                 stroke="#4f7fff"
-                strokeWidth="1.6"
+                strokeWidth="0.9"
+                strokeOpacity="0.5"
                 fill="none"
                 strokeLinecap="round"
-                strokeDasharray="80 920"
+                strokeDasharray="24 1400"
                 style={{
-                  animation: "p2-dash-flow 9s linear infinite",
-                  filter: "drop-shadow(0 0 4px rgba(79, 127, 255, 0.7))",
+                  animation: "p2-dash-flow 24s linear infinite",
+                  filter: "drop-shadow(0 0 2px rgba(79, 127, 255, 0.5))",
                 }}
               />
             </svg>
