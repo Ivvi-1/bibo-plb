@@ -54,7 +54,7 @@ export default function P2Navbar() {
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-6 py-3.5 flex items-center justify-between">
           <Link
-            href={`/${locale}/p2`}
+            href={`/${locale}`}
             className="flex items-center gap-2 text-[15px] font-semibold tracking-tight text-[#0a0a0a]"
             onClick={closeAnd()}
           >

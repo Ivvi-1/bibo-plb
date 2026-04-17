@@ -1,29 +1,25 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import ValueProps from "@/components/ValueProps";
-import Models from "@/components/Models";
-import Products from "@/components/Products";
-import Process from "@/components/Process";
-import Trust from "@/components/Trust";
-import ContactForm from "@/components/ContactForm";
-import Footer from "@/components/Footer";
+import P2Navbar from "@/components/p2/P2Navbar";
+import P2Hero from "@/components/p2/P2Hero";
+import P2Capabilities from "@/components/p2/P2Capabilities";
+import P2Products from "@/components/p2/P2Products";
+import P2Process from "@/components/p2/P2Process";
+import P2Partnership from "@/components/p2/P2Partnership";
+import P2Contact from "@/components/p2/P2Contact";
+import P2Footer from "@/components/p2/P2Footer";
 
 export default function HomePage() {
   return (
     <>
-      <Navbar />
+      <P2Navbar />
       <main>
-        <Hero />
-        <About />
-        <ValueProps />
-        <Models />
-        <Products />
-        <Process />
-        <Trust />
-        <ContactForm />
+        <P2Hero />
+        <P2Capabilities />
+        <P2Products />
+        <P2Process />
+        <P2Partnership />
+        <P2Contact />
       </main>
-      <Footer />
+      <P2Footer />
     </>
   );
 }
