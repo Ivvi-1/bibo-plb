@@ -108,5 +108,110 @@
     "description": "AI Product Platform for founders and companies. We launch, test and scale digital products.",
     "products_title": "Products",
     "copyright": "© 2025 BIBO PLB. All rights reserved."
+  },
+  "p2": {
+    "nav": {
+      "capabilities": "Capabilities",
+      "products": "Products",
+      "process": "Process",
+      "partnership": "Partnership",
+      "contact": "Get in touch"
+    },
+    "hero": {
+      "eyebrow": "AI product platform",
+      "headline_a": "We build AI products",
+      "headline_b": "that actually ship",
+      "sub": "BIBO PLB is a product platform for founders and companies. We design, engineer and launch AI services end-to-end — from the first hypothesis to a live product with users.",
+      "cta_primary": "Start a conversation",
+      "cta_secondary": "See what we've shipped",
+      "metric1_value": "4",
+      "metric1_label": "products shipped",
+      "metric2_value": "AI-first",
+      "metric2_label": "engineering",
+      "metric3_value": "end-to-end",
+      "metric3_label": "execution"
+    },
+    "capabilities": {
+      "eyebrow": "What we do",
+      "title": "A full-stack AI product team in one place",
+      "sub": "We combine everything it takes to move an AI idea from zero to paying users — under one roof.",
+      "card1_title": "AI engineering",
+      "card1_text": "LLM pipelines, agents, RAG systems, custom embeddings, evaluation loops. Production-grade, not demos.",
+      "card2_title": "Product & design",
+      "card2_text": "We decide what to build and what to cut. Clear scope, strong UX, fast iteration on real users.",
+      "card3_title": "Cloud & deployment",
+      "card3_text": "Infra, pipelines, observability. Deployed to production from day one — no handoff, no drift.",
+      "card4_title": "Growth & distribution",
+      "card4_text": "Positioning, landing, acquisition. We don't stop at launch — we find the channel that works."
+    },
+    "products": {
+      "eyebrow": "Already shipped",
+      "title": "Our own products prove we can execute",
+      "sub": "Four AI products built and run by our team. Same discipline we bring to partner projects.",
+      "visit": "Open site",
+      "reputar_tag": "Reputation AI",
+      "reputar_desc": "Monitors reviews and mentions across social platforms, flags risks in real time.",
+      "mooly_tag": "Real Estate AI",
+      "mooly_desc": "Aggregates and deduplicates real estate listings from public sources.",
+      "gedell_tag": "Investment AI",
+      "gedell_desc": "Investment attractiveness analysis for Dubai real estate.",
+      "lem_tag": "Group Monitoring AI",
+      "lem_desc": "AI agent that listens to Telegram and WhatsApp groups and extracts structured data."
+    },
+    "process": {
+      "eyebrow": "How we work",
+      "title": "From first call to first users in weeks — not quarters",
+      "step1_num": "01",
+      "step1_title": "Discover",
+      "step1_text": "We pressure-test the problem, map users, and cut scope to what actually matters.",
+      "step2_num": "02",
+      "step2_title": "Design",
+      "step2_text": "Architecture, UX, AI approach. One coherent product, not a bag of features.",
+      "step3_num": "03",
+      "step3_title": "Ship",
+      "step3_text": "We build the MVP in weeks. Production infra, real data, no throwaway prototypes.",
+      "step4_num": "04",
+      "step4_title": "Scale",
+      "step4_text": "We stay with the product — improve, measure, grow. That's how real products get built."
+    },
+    "partnership": {
+      "eyebrow": "Ways to work together",
+      "title": "Pick the format that matches your stage",
+      "way1_title": "Service partner",
+      "way1_text": "We build your AI product or module end-to-end. You own it, we deliver it.",
+      "way1_tag": "For companies",
+      "way2_title": "Founding partner",
+      "way2_text": "We join your startup as tech and product co-founders. Equity-based. MVP to scale.",
+      "way2_tag": "For founders",
+      "way3_title": "Co-investment",
+      "way3_text": "We co-build and co-invest in AI products where our skill and your network compound.",
+      "way3_tag": "For investors"
+    },
+    "contact": {
+      "eyebrow": "Let's talk",
+      "title": "Tell us what you're building",
+      "sub": "We'll reply within a business day with a direct path forward — not a sales sequence.",
+      "name_label": "Your name",
+      "name_placeholder": "Jane Doe",
+      "company_label": "Company or project",
+      "company_placeholder": "Acme Inc. or personal",
+      "contact_label": "How to reach you",
+      "contact_placeholder": "Email, Telegram, WhatsApp",
+      "role_label": "You are",
+      "role_partner": "A potential partner",
+      "role_client": "A potential client",
+      "role_investor": "An investor",
+      "role_other": "Something else",
+      "task_label": "What do you have in mind?",
+      "task_placeholder": "A few sentences is enough — we'll take it from there.",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Got it. We'll reply shortly.",
+      "error": "Something went wrong. Please try again."
+    },
+    "footer": {
+      "tagline": "AI products, built to ship.",
+      "rights": "© 2026 BIBO PLB"
+    }
   }
 }
