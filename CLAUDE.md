@@ -307,7 +307,10 @@ npx tsc --noEmit
 - [x] **Favicon** — `src/app/icon.svg` + `src/app/apple-icon.svg`, starburst-стиль (тёмный квадрат + белый вложенный + синяя точка).
 - [x] **Canonical + hreflang** — в `[locale]/layout.tsx` через `generateMetadata` + `alternates.canonical` + `alternates.languages` (включая `x-default`). Отдельные тексты title/description для каждой локали в `LOCALE_COPY`.
 - [x] **sitemap.xml + robots.txt** — `src/app/sitemap.ts` и `src/app/robots.ts` через MetadataRoute-конвенции. Автогенерятся в билде.
-- [x] **Аналитика** — Plausible-скрипт в `[locale]/layout.tsx`, гейтится через `process.env.NEXT_PUBLIC_ANALYTICS_DOMAIN`. Чтобы включить: зарегистрироваться на plausible.io, добавить сайт `biboplb.pro`, выставить в Railway `NEXT_PUBLIC_ANALYTICS_DOMAIN=biboplb.pro`, редеплой. Без этой env-переменной скрипт не грузится.
+- [x] **Аналитика** — код поддерживает два провайдера, оба опциональны через env-переменные. Без переменных никакие скрипты не грузятся (ноль трекинга).
+  - **Microsoft Clarity** (бесплатно навсегда, без лимитов, session replay + heatmaps + click-tracking — идеально для закрытого тестирования): https://clarity.microsoft.com → создать проект → Get tracking code → скопировать Project ID → в Railway выставить `NEXT_PUBLIC_CLARITY_ID=<ID>` → редеплой.
+  - **Plausible** ($9/мес, privacy-first, GDPR) — если когда-нибудь понадобится: `NEXT_PUBLIC_PLAUSIBLE_DOMAIN=biboplb.pro`.
+  - Можно включить оба одновременно — они не конфликтуют.
 - [x] **JSON-LD Organization** (бонусом) — `schema.org/Organization` в `<head>` со ссылками на 4 продукта (reputar / mooly / gedell / lem). Улучшает богатые сниппеты в Google.
 
 ### Желательные

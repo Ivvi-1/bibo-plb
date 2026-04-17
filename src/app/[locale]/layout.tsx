@@ -93,7 +93,8 @@ export default async function LocaleLayout({
 
   const messages = (await import(`../../../messages/${locale}.json`)).default;
 
-  const analyticsDomain = process.env.NEXT_PUBLIC_ANALYTICS_DOMAIN;
+  const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
+  const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -121,10 +122,19 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
-        {analyticsDomain && (
+        {clarityId && (
+          <Script id="ms-clarity" strategy="afterInteractive">
+            {`(function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "${clarityId}");`}
+          </Script>
+        )}
+        {plausibleDomain && (
           <Script
             defer
-            data-domain={analyticsDomain}
+            data-domain={plausibleDomain}
             src="https://plausible.io/js/script.js"
             strategy="afterInteractive"
           />
