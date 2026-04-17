@@ -302,12 +302,13 @@ npx tsc --noEmit
 
 ## 13. Backlog / что надо доделать
 
-### Обязательные
-- [ ] **Реальный og:image** для соцсетей (сейчас метаданные открытого графа без картинки — будет прилетать пустая карточка в Telegram/LinkedIn). Залить скриншот `/en` 1200×630 в `public/og.png` и добавить в `metadata.openGraph.images`.
-- [ ] **Favicon** — сейчас стандартный Next.js. Сделать starburst-style SVG, похожий на лого в навбаре.
-- [ ] **Canonical + hreflang** для EN/RU/UK в root layout (сейчас отсутствуют — потеря SEO).
-- [ ] **Sitemap + robots.txt** (пустые).
-- [ ] **Аналитика** — воткнуть Plausible/Umami/GA (нет сейчас).
+### Обязательные — ✅ все сделаны 2026-04-17
+- [x] **og:image** — `src/app/[locale]/opengraph-image.tsx` генерит 1200×630 PNG через `ImageResponse` для каждой локали. Заголовок и подпись берутся из `LOCALE_COPY`.
+- [x] **Favicon** — `src/app/icon.svg` + `src/app/apple-icon.svg`, starburst-стиль (тёмный квадрат + белый вложенный + синяя точка).
+- [x] **Canonical + hreflang** — в `[locale]/layout.tsx` через `generateMetadata` + `alternates.canonical` + `alternates.languages` (включая `x-default`). Отдельные тексты title/description для каждой локали в `LOCALE_COPY`.
+- [x] **sitemap.xml + robots.txt** — `src/app/sitemap.ts` и `src/app/robots.ts` через MetadataRoute-конвенции. Автогенерятся в билде.
+- [x] **Аналитика** — Plausible-скрипт в `[locale]/layout.tsx`, гейтится через `process.env.NEXT_PUBLIC_ANALYTICS_DOMAIN`. Чтобы включить: зарегистрироваться на plausible.io, добавить сайт `biboplb.pro`, выставить в Railway `NEXT_PUBLIC_ANALYTICS_DOMAIN=biboplb.pro`, редеплой. Без этой env-переменной скрипт не грузится.
+- [x] **JSON-LD Organization** (бонусом) — `schema.org/Organization` в `<head>` со ссылками на 4 продукта (reputar / mooly / gedell / lem). Улучшает богатые сниппеты в Google.
 
 ### Желательные
 - [ ] Cookie/GDPR баннер (особенно для UA-пользователей).
