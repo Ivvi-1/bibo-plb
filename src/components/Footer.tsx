@@ -7,7 +7,7 @@ const PRODUCTS = [
   { name: "Reputar", domain: "https://reputar.tech" },
   { name: "Mooly", domain: "https://mooly.tech" },
   { name: "Gedell", domain: "https://gedell.tech" },
-  { name: "Raven", domain: null },
+  { name: "Lem", domain: "https://lem.in.ua" },
 ];
 
 export default function Footer() {

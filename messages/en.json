@@ -56,9 +56,9 @@
     "gedell_name": "Gedell",
     "gedell_desc": "AI analysis of investment attractiveness of real estate in Dubai.",
     "gedell_value": "Data-driven investment decisions.",
-    "raven_name": "Raven",
-    "raven_desc": "AI service for reducing information overload.",
-    "raven_value": "Time savings and reduced information load.",
+    "lem_name": "Lem",
+    "lem_desc": "AI agent that monitors Telegram and WhatsApp groups and extracts structured data.",
+    "lem_value": "24/7 monitoring without admin rights, custom schemas, NL-chat with your data.",
     "visit": "Visit website"
   },
   "process": {
