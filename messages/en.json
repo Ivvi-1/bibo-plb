@@ -101,7 +101,41 @@
     },
     "footer": {
       "tagline": "AI products, built to ship.",
-      "rights": "© 2026 BIBO PLB"
+      "rights": "© 2026 BIBO PLB",
+      "privacy": "Privacy",
+      "terms": "Terms"
+    }
+  },
+  "legal": {
+    "back": "Back to home",
+    "updated": "Last updated: April 22, 2026",
+    "privacy": {
+      "title": "Privacy Policy",
+      "intro": "BIBO PLB respects your privacy. This page describes what data we collect through this website and how we use it.",
+      "h_data": "Data we collect",
+      "data": "We collect only the information you submit through our contact form (name, company, contact details, your message). We also collect anonymized analytics — page views, country, device type — through Microsoft Clarity and/or Google Analytics if enabled.",
+      "h_use": "How we use it",
+      "use": "We use your contact information solely to reply to your inquiry. We do not sell, rent, or share your data with third parties for marketing.",
+      "h_storage": "Storage",
+      "storage": "Form submissions are forwarded to a private Telegram channel managed by the BIBO PLB team. Analytics is stored by the analytics provider and is fully anonymized.",
+      "h_rights": "Your rights",
+      "rights": "You can request deletion of your data at any time by emailing hello@biboplb.pro. We will respond within 7 business days.",
+      "h_contact": "Contact",
+      "contact": "For privacy questions, email hello@biboplb.pro."
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "intro": "By using biboplb.pro you agree to these terms. The site is provided as-is, without warranty.",
+      "h_use": "Use of the site",
+      "use": "You may browse the site and submit inquiries through the contact form. You agree not to use the site for unlawful purposes or to disrupt its operation.",
+      "h_ip": "Intellectual property",
+      "ip": "All content on this site — text, design, code, branding — is owned by BIBO PLB and may not be reproduced without written permission.",
+      "h_liability": "Liability",
+      "liability": "BIBO PLB is not liable for any indirect or consequential damages arising from use of this site or its content. The information here does not constitute professional advice.",
+      "h_changes": "Changes",
+      "changes": "We may update these terms at any time. Continued use of the site means you accept the updated terms.",
+      "h_contact": "Contact",
+      "contact": "Questions: hello@biboplb.pro."
     }
   }
 }

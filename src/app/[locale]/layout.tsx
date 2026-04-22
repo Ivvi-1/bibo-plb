@@ -17,13 +17,21 @@ const instrumentSerif = Instrument_Serif({
 
 const SITE_URL = "https://biboplb.pro";
 
-const LOCALE_COPY: Record<string, { title: string; description: string; ogDescription: string }> = {
+const LOCALE_COPY: Record<string, { title: string; description: string; ogDescription: string; keywords: string[] }> = {
   en: {
     title: "BIBO PLB — AI products, built to ship",
     description:
       "BIBO PLB is an AI product platform. We design, engineer and launch AI services end-to-end for founders, companies and investors.",
     ogDescription:
       "AI product platform. End-to-end execution from first hypothesis to a live product with users.",
+    keywords: [
+      "AI product studio",
+      "AI development agency",
+      "LLM engineering",
+      "AI MVP",
+      "AI consultancy",
+      "BIBO PLB",
+    ],
   },
   ru: {
     title: "BIBO PLB — AI-продукты, доведённые до результата",
@@ -31,6 +39,14 @@ const LOCALE_COPY: Record<string, { title: string; description: string; ogDescri
       "BIBO PLB — продуктовая платформа. Проектируем, разрабатываем и запускаем AI-сервисы end-to-end для основателей, компаний и инвесторов.",
     ogDescription:
       "AI-продуктовая платформа. Полный цикл — от первой гипотезы до живого продукта с пользователями.",
+    keywords: [
+      "AI агентство",
+      "разработка AI продуктов",
+      "LLM разработка",
+      "AI MVP",
+      "продуктовая студия",
+      "BIBO PLB",
+    ],
   },
   uk: {
     title: "BIBO PLB — AI-продукти, доведені до результату",
@@ -38,8 +54,43 @@ const LOCALE_COPY: Record<string, { title: string; description: string; ogDescri
       "BIBO PLB — продуктова платформа. Проєктуємо, розробляємо та запускаємо AI-сервіси end-to-end для засновників, компаній та інвесторів.",
     ogDescription:
       "AI-продуктова платформа. Повний цикл — від першої гіпотези до живого продукту з користувачами.",
+    keywords: [
+      "AI агенція",
+      "розробка AI продуктів",
+      "LLM інженерія",
+      "AI MVP",
+      "продуктова студія",
+      "BIBO PLB",
+    ],
   },
 };
+
+const PRODUCTS = [
+  {
+    name: "Reputar",
+    url: "https://reputar.tech",
+    category: "Reputation AI",
+    description: "Monitors reviews and social mentions, flags reputation risks in real time.",
+  },
+  {
+    name: "Mooly",
+    url: "https://mooly.tech",
+    category: "Real Estate AI",
+    description: "Aggregates and deduplicates real estate listings from public sources.",
+  },
+  {
+    name: "Gedell",
+    url: "https://gedell.tech",
+    category: "Investment AI",
+    description: "Analyzes investment attractiveness of real estate in Dubai.",
+  },
+  {
+    name: "Lem",
+    url: "https://lem.in.ua",
+    category: "Group Monitoring AI",
+    description: "AI agent listens to Telegram and WhatsApp groups and extracts structured data.",
+  },
+];
 
 export async function generateMetadata({
   params,
@@ -57,6 +108,7 @@ export async function generateMetadata({
   return {
     title: copy.title,
     description: copy.description,
+    keywords: copy.keywords,
     metadataBase: new URL(SITE_URL),
     alternates: {
       canonical: path,
@@ -75,6 +127,21 @@ export async function generateMetadata({
       title: copy.title,
       description: copy.ogDescription,
     },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
+    authors: [{ name: "BIBO PLB" }],
+    creator: "BIBO PLB",
+    publisher: "BIBO PLB",
+    category: "Technology",
   };
 }
 
@@ -92,24 +159,60 @@ export default async function LocaleLayout({
   }
 
   const messages = (await import(`../../../messages/${locale}.json`)).default;
+  const copy = LOCALE_COPY[locale] ?? LOCALE_COPY.en;
 
   const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
   const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "BIBO PLB",
-    url: SITE_URL,
-    logo: `${SITE_URL}/icon.svg`,
-    email: "hello@biboplb.pro",
-    sameAs: [
-      "https://reputar.tech",
-      "https://mooly.tech",
-      "https://gedell.tech",
-      "https://lem.in.ua",
-    ],
-  };
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "BIBO PLB",
+      alternateName: "BIBO Product Lab",
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/icon.svg`,
+        width: 256,
+        height: 256,
+      },
+      email: "hello@biboplb.pro",
+      description: copy.description,
+      sameAs: PRODUCTS.map((p) => p.url),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "BIBO PLB",
+      description: copy.description,
+      inLanguage: locale,
+      publisher: { "@id": `${SITE_URL}/#organization` },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "@id": `${SITE_URL}/#products`,
+      name: "BIBO PLB Products",
+      itemListElement: PRODUCTS.map((p, idx) => ({
+        "@type": "ListItem",
+        position: idx + 1,
+        item: {
+          "@type": "SoftwareApplication",
+          name: p.name,
+          url: p.url,
+          applicationCategory: p.category,
+          description: p.description,
+          operatingSystem: "Web",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        },
+      })),
+    },
+  ];
 
   return (
     <html lang={locale} className={`${inter.className} ${instrumentSerif.variable}`}>
@@ -138,6 +241,20 @@ export default async function LocaleLayout({
             src="https://plausible.io/js/script.js"
             strategy="afterInteractive"
           />
+        )}
+        {gaId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${gaId}', { anonymize_ip: true });`}
+            </Script>
+          </>
         )}
       </body>
     </html>

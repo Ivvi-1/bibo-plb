@@ -1,9 +1,11 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 
 export default function P2Footer() {
   const t = useTranslations("p2.footer");
+  const locale = useLocale();
 
   return (
     <footer className="bg-white border-t border-[#e8e6df] py-12 px-6">
@@ -19,13 +21,25 @@ export default function P2Footer() {
           </div>
         </div>
 
-        <div className="flex items-center gap-6 text-[12.5px] text-[#6b6b6b]">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[12.5px] text-[#6b6b6b]">
           <a
             href="mailto:hello@biboplb.pro"
             className="hover:text-[#0a0a0a] transition-colors"
           >
             hello@biboplb.pro
           </a>
+          <Link
+            href={`/${locale}/privacy`}
+            className="hover:text-[#0a0a0a] transition-colors"
+          >
+            {t("privacy")}
+          </Link>
+          <Link
+            href={`/${locale}/terms`}
+            className="hover:text-[#0a0a0a] transition-colors"
+          >
+            {t("terms")}
+          </Link>
           <span>{t("rights")}</span>
         </div>
       </div>

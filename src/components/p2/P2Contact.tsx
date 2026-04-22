@@ -12,6 +12,7 @@ export default function P2Contact() {
   const [contact, setContact] = useState("");
   const [role, setRole] = useState("");
   const [task, setTask] = useState("");
+  const [website, setWebsite] = useState(""); // honeypot
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   const onSubmit = async (e: React.FormEvent) => {
@@ -23,7 +24,7 @@ export default function P2Contact() {
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, company, contact, task, role, source: "p2" }),
+        body: JSON.stringify({ name, company, contact, task, role, website, source: "p2" }),
       });
       if (!res.ok) throw new Error("bad response");
       setStatus("sent");
@@ -32,6 +33,7 @@ export default function P2Contact() {
       setContact("");
       setRole("");
       setTask("");
+      setWebsite("");
     } catch {
       setStatus("error");
     }
@@ -62,6 +64,21 @@ export default function P2Contact() {
             onSubmit={onSubmit}
             className="bg-white border border-[#e8e6df] rounded-3xl p-8 md:p-10 shadow-[0_4px_24px_rgba(10,10,10,0.03)]"
           >
+            <div
+              aria-hidden="true"
+              style={{ position: "absolute", left: "-10000px", width: 1, height: 1, overflow: "hidden" }}
+            >
+              <label>
+                Website
+                <input
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={website}
+                  onChange={(e) => setWebsite(e.target.value)}
+                />
+              </label>
+            </div>
             <div className="grid md:grid-cols-2 gap-5">
               <Field
                 label={t("name_label")}
